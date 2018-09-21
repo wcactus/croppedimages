@@ -1,0 +1,41 @@
+{
+    "name": "wcactus/croppedimages",
+    "description": "Laravel 5 module for creating preconfigured image thumbnails on the fly",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "~5.0",
+        "illuminate/database": "~5.0",
+        "intervention/image": "~2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3",
+        "mockery/mockery": "^1.1",
+		"orchestra/testbench": "~3.0"
+    },
+    "authors": [
+        {
+            "name": "Anton Folumenov",
+            "email": "anton.folumenov@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wcactus\\CroppedImages\\": "src/"
+        }
+    },
+	"autoload-dev": {
+        "psr-4": {
+            "Wcactus\\CroppedImages\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wcactus\\CroppedImages\\ServiceProvider"
+            ],
+            "aliases": {
+                "CroppedImages": "Wcactus\\CroppedImages\\Facade"
+            }
+        }
+    }
+}
